@@ -1,66 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>OneBAJavascript</title>
     <meta charset="UTF-8">
     <meta name="keywords" content="HTML, CSS, Javascript">
     <meta name="description" content="OneBAHTML for testing HTML, CSS, and Javascript">
-    <!-- https://www.github.com/OneBACaterpie/OneBAJavascript-->
-    <meta name="author" content="OneBACaterpie"
+    <!--https://www.github.com/OneBACaterpie/OneBAJavascript-->
+    <meta name="author" content="OneBACaterpie">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>OneBAJavascript</h1>
-    <h2>Goals</h2>
-    <p>For a table of addresses in Excel, lookup the Representative and Senator for each address and write them in the appropriate column.</p>
-    <br>
-    <p>For example:</p>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>StreetAddress</th>
-            <th>City</th>
-            <th>State</th>
-            <th>ZipCode</th>
-            <th>House</th>
-            <th>Senate</th>
+    <h1 id="pageTitle">OneBAJavascript</h1>
+    <h2 id="projectGoalsTitle">Project Goals</h2>
+    <table id="projectGoals">
+        <tr id="tableHeaders">
+            <th>Goal</th>
+            <th>Status</th>
+            <th>Notes</th>
         </tr>
-        <tr>
-            <td>Michigan State Capitol</td>
-            <td>100 N Capitol Ave</td>
-            <td>Lansing</td>
-            <td>MI</td>
-            <td>48933</td>
-            <td></td>
-            <td></td>
+        <tr id="goalOne">
+            <td>Retrieve data object from API.</td>
+            <td>Testing</td>
+            <td>Potentially being blocked by some APIs because initiating request from local file. Attempting on GitHub.</td>
         </tr>
-        <tr>
-            <td>Comerica Park</td>
-            <td>2100 Woodward Ave</td>
-            <td>Detroit</td>
-            <td>MI</td>
-            <td>48201</td>
-            <td></td>
-            <td></td>
+        <tr id="goalTwo">
+            <td>Pull specific data from data object.</td>
+            <td>Completed</td>
+            <td>Completed with local file.</td>
         </tr>
-        <tr>
-            <td>Van Andel Arena</td>
-            <td>130 Fulton St W</td>
-            <td>Grand Rapids</td>
-            <td>MI</td>
-            <td>49503</td>
-            <td></td>
-            <td></td>
+        <tr id="goalThree">
+            <td>Loop API pulls using array.</td>
+            <td>Completed</td>
+            <td>Completed with pre-determined array.</td>
         </tr>
-        <tr>
-            <td>Bronner's Christmas Wonderland</td>
-            <td>25 Christmas Ln</td>
-            <td>Frankenmuth</td>
-            <td>MI</td>
-            <td>48734</td>
-            <td></td>
-            <td></td>
+        <tr id="goalFour">
+            <td>Write data from API pull into array.</td>
+            <td>Completed</td>
+            <td>Completed with pre-determined array.</td>
+        </tr>
+        <tr id="goalFive">
+            <td>Create an array from Excel spreadsheet.</td>
+            <td>Not started</td>
+            <td>Looking at SheetsJS.</td>
+        </tr>
+        <tr id="goalSix">
+            <td>Write new Excel sheet with updated array.</td>
+            <td>Not started</td>
+            <td>Looking at SheetJS.</td>
         </tr>
     </table>
+
+    <div id="testArea">
+        <h2>Test Area</h2>
+        <div id="testFetch">
+            <button id="submitRequest" onclick="getData()">Fetch</button>
+            <h3><strong>Status</strong>: <span id="fetchStatus"></span></h3>
+            <h3><strong>Output</strong>: <span id=fetchOutput"></span></h3>
+        </div>
+    </div>
+    <script src="getAddressData.js"></script>
 </body>
 </html>
